@@ -1,0 +1,2 @@
+# Kombinatorika
+Seminarna uloha
