@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void generuj_kompozicie(int n) {
+    if n <= 0 {
+        printf("Chyba: Cislo musi byt vacsie ako 0.\n");
+        return;
+            }
+}
+
 main(){
     int cislo;
     printf("Zadaj cislo: ");
