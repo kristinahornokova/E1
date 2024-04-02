@@ -5,8 +5,17 @@ void generuj_kompozicie(int n) {
     if n <= 0 {
         printf("Chyba: Cislo musi byt vacsie ako 0.\n");
         return;
-            }
+    }
+    int *kompozicia = (int *)malloc(n * sizeof(int)); 
+    if (kompozicia == NULL) {
+        printf("Chyba: Nedostatok pamate.\n");
+        return;
+    }
+    
+    free(kompozicia); // Uvolnenie pamate
 }
+
+
 
 main(){
     int cislo;
