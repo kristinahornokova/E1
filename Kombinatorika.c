@@ -4,7 +4,7 @@
 void vypis_kompoziciu(int *kompozicia, int pocet) {
     for (int i = 0; i < pocet; i++) {
         printf("%d", kompozicia[i]);
-        if (i < pocet)
+        if (i < pocet - 1)
             printf(" + ");
     }
     printf("\n");
