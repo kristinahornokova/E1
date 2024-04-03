@@ -1,6 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void vypis_kompoziciu(int *kompozicia, int pocet) {
+    for (int i = 0; i < pocet; i++) {
+        printf("%d", kompozicia[i]);
+        if (i < pocet - 1)
+            printf(" + ");
+    }
+    printf("\n");
+}
+
 void generuj_kompozicie(int n) {
     if n <= 0 {
         printf("Chyba: Cislo musi byt vacsie ako 0.\n");
