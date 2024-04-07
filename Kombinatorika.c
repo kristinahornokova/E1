@@ -21,6 +21,10 @@ void generuj_kompozicie(int n) {
         return;
     }
     
+    // Inicializácia kompozície
+    for (int i = 0; i < n; i++) {
+        kompozicia[i] = 1;
+        
     free(kompozicia); // Uvolnenie pamate
 }
 
