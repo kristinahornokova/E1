@@ -3,11 +3,14 @@
 
 void vypis_kompoziciu(int *kompozicia, int pocet) {
     for (int i = 0; i < pocet; i++) {
-        printf("%d", kompozicia[i]);
+        if (kompozicia[i] != 0) {printf("%d", kompozicia[i]);
+        
         if (i < pocet - 1)
             printf(" + ");
+        }
     }
     printf("\n");
+   
 }
 
 void generuj_kompozicie(int n) {
@@ -25,7 +28,7 @@ void generuj_kompozicie(int n) {
     for (int i = 0; i < n; i++) {
         kompozicia[i] = 1;
     }
-    
+
     free(kompozicia); // Uvolnenie pamate
 }
 
