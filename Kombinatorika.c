@@ -17,7 +17,7 @@ void vypis_kompoziciu(int *kompozicia, int pocet) {
 }
 
 void generuj_kompozicie(int n) {
-    if n <= 0 {
+    if (n <= 0) {
         printf("Chyba: Cislo musi byt vacsie ako 0.\n");
         return FAIL;
     }
