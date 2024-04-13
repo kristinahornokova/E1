@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define OK 1
+#define FAIL 0
+
 void vypis_kompoziciu(int *kompozicia, int pocet) {
     for (int i = 0; i < pocet; i++) {
         if (kompozicia[i] != 0) {printf("%d", kompozicia[i]);
@@ -16,12 +19,12 @@ void vypis_kompoziciu(int *kompozicia, int pocet) {
 void generuj_kompozicie(int n) {
     if n <= 0 {
         printf("Chyba: Cislo musi byt vacsie ako 0.\n");
-        return;
+        return FAIL;
     }
     int *kompozicia = (int *)malloc(n * sizeof(int)); 
     if (kompozicia == NULL) {
         printf("Chyba: Nedostatok pamate.\n");
-        return;
+        return FAIL;
     }
     
     // Inicializácia kompozície
