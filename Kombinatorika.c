@@ -32,18 +32,45 @@ void generuj_kompozicie(int n) {
         kompozicia[i] = 0;
     }
     int sucet = 0;
+    int index = n - 1;
+
+    while (1) {
+        if (sucet == n) {
+            vypis_kompoziciu(kompozicia, n);
+        }
+        
+        int kontrola = 1;
+        sucet = 0;
+        while (index >= 0 && kontrola) {
+            kompozicia[index]++;
+            kontrola = 0;
+            if (kompozicia[index] > n) {
+                kompozicia[index] = 1;
+                kontrola = 1;
+                index = index - 1;
+            }
+        }
+        if (index < 0) break;
+        
+        for (int i = 0; i < n; i++) {
+            sucet = sucet + kompozicia[i];
+        }
+        index = n - 1;
+    }
 
     free(kompozicia); // Uvolnenie pamate
+    return OK;
 }
 
 
 
-main(){
+int main(void){
     int cislo;
     printf("Zadaj cislo: ");
     if (scanf ("%d", &cislo) !=1){
         printf("Chyba: Zadajte platne cele cislo. \n");
-        return 1;
+        return FAIL;
     }
+    generuj_kompozicie(cislo);
     return 0;
 }
