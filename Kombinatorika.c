@@ -17,17 +17,21 @@ void vypis_kompoziciu(int *kompozicia, int pocet) {
 }
 
 void generuj_kompozicie(int n) {
-    if (n <= 0) {
-        printf("Chyba: Cislo musi byt vacsie ako 0.\n");
-        return FAIL;
+    if (n > 0 && n < 11) {
+        printf("Zacinam pocitat kompozicie.\n");
     }
+    else {
+        printf("Chyba: Cislo musi byt vacsie ako 0.\n");
+        return;
+        }
+    
     int *kompozicia = (int *)malloc(n * sizeof(int)); 
     if (kompozicia == NULL) {
         printf("Chyba: Nedostatok pamate.\n");
-        return FAIL;
+        return;
     }
     
-    // Inicializácia kompozície
+    // Inicializacia kompozicie
     for (int i = 0; i < n; i++) {
         kompozicia[i] = 0;
     }
