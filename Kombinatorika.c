@@ -63,7 +63,7 @@ void generuj_kompozicie(int n) {
     }
 
     free(kompozicia); // Uvolnenie pamate
-    return OK;
+    return;
 }
 
 
@@ -76,5 +76,5 @@ int main(void){
         return FAIL;
     }
     generuj_kompozicie(cislo);
-    return 0;
+    return FAIL;
 }
