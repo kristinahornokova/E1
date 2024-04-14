@@ -70,7 +70,7 @@ void generuj_kompozicie(int n) {
 
 int main(void){
     int cislo;
-    printf("Zadaj cislo: ");
+    printf("Zadaj cislo od 1 do 10: ");
     if (scanf ("%d", &cislo) !=1){
         printf("Chyba: Zadajte platne cele cislo. \n");
         return FAIL;
